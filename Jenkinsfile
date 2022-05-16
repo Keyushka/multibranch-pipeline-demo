@@ -2,7 +2,7 @@ pipeline {
 
     agent {
         node {
-            label 'master'
+            label 'third'
         }
     }
 
@@ -52,7 +52,7 @@ pipeline {
 
         stage('Build Deploy Code') {
             when {
-                branch 'develop'
+                branch 'second'
             }
             steps {
                 sh """
